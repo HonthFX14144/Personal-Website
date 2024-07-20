@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: PersonalProject
+    env: java
+    plan: free
+    buildCommand: |
+      curl -sL https://deb.nodesource.com/setup_14.x | bash -
+      apt-get install -y maven
+      mvn clean package
+    startCommand: java -jar target/PersonalProject-1.0-SNAPSHOT.war
+
