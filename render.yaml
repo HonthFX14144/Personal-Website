@@ -4,5 +4,6 @@ services:
     env: docker
     plan: free
     buildCommand: docker build -t PersonalProject .
+    runtime: docker
     startCommand: docker run -p 8080:8080 PersonalProject
 
